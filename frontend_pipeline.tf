@@ -155,7 +155,7 @@ resource "aws_codebuild_project" "fe_codebuild_tf_deploy" {
   }
 }
 
-data "aws_ssm_parameter" "github-parameter" {
+data "aws_ssm_parameter" "fe_github-parameter" {
   name = "github-token"
 }
 
@@ -164,7 +164,7 @@ resource "aws_codepipeline" "fe_codepipeline" {
   role_arn = aws_iam_role.fe_pipeline_role.arn
 
   artifact_store {
-    location = aws_s3_bucket.fe-codepipeline_bucket.bucket
+    location = aws_s3_bucket.fe_codepipeline_bucket.bucket
     type     = "S3"
   }
 
@@ -183,7 +183,7 @@ resource "aws_codepipeline" "fe_codepipeline" {
         Owner    = "Carlleo53"
         Repo     = "farm-stack-course"
         Branch   = "main"
-         OAuthToken = data.aws_ssm_parameter.github-parameter.value
+         OAuthToken = data.aws_ssm_parameter.fe_github-parameter.value
       }
     }
   }
