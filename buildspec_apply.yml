@@ -13,6 +13,7 @@ phases:
       - sudo mv terraform /usr/local/bin/
       - terraform -version
 
+
   build:
     commands:
       - pwd
@@ -22,4 +23,4 @@ phases:
 
   post_build:
     commands:
-      - echo "Resources created"
+      - echo "Resources created by me"
