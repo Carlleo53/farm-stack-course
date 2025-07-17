@@ -1,7 +1,3 @@
-provider "aws" {
-    region = "us-east-1"
-}
-
 resource "aws_s3_bucket" "fe_codepipeline_bucket" {
   bucket = "fe-carl53-test-bucket"
 }
