@@ -22,4 +22,4 @@ phases:
 
   post_build:
     commands:
-      - echo "Resources created"
+      - echo "Resources created by me"
