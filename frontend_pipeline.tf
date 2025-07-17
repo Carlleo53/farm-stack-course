@@ -193,11 +193,11 @@ resource "aws_codepipeline" "fe_codepipeline" {
       owner            = "AWS"
       provider         = "CodeBuild"
       input_artifacts  = ["source_output"]
-      output_artifacts = ["build_output_plan"]
+      output_artifacts = ["build_output_build"]
       version          = "1"
 
       configuration = {
-        ProjectName = aws_codebuild_project.fe_codebuild_tf_plan.id
+        ProjectName = aws_codebuild_project.fe_codebuild_tf_build.id
       }
     }
   }
