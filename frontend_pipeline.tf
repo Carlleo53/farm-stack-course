@@ -177,7 +177,7 @@ resource "aws_codepipeline" "fe_codepipeline" {
 
       configuration = {
         Owner    = "Carlleo53"
-        Repo     = "farm-stack-course"
+        Repo     = "farm-stack-fe"
         Branch   = "main"
          OAuthToken = data.aws_ssm_parameter.fe_github-parameter.value
       }

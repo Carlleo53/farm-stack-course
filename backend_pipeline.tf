@@ -182,7 +182,7 @@ resource "aws_codepipeline" "be_codepipeline" {
 
       configuration = {
         Owner    = "Carlleo53"
-        Repo     = "farm-stack-course"
+        Repo     = "farm-stack-be"
         Branch   = "main"
         OAuthToken = data.aws_ssm_parameter.be-github-parameter.value
       }
