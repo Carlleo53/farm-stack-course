@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket         = "bestate_bucket"
+    bucket         = "carl-bestate-bucket"
     key            = "global/s3/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "statetf-locks"
+    dynamodb_table = "bestatetf-locks"
   }
 }
