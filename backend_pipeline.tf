@@ -159,6 +159,9 @@ data "aws_ssm_parameter" "be-github-parameter" {
   name = "github-token"
 }
 
+data "aws_ssm_parameter" "be-keypair-parameter" {
+  name = "carlkey.pem"
+}
 
 resource "aws_codepipeline" "be_codepipeline" {
   name     = "be_tf-pipeline"
